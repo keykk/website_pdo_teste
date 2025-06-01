@@ -21,12 +21,12 @@ Este documento contém as instruções para configurar o banco de dados MariaDB/
    
    Ou você pode executar o conteúdo do arquivo `app/config/database.sql` diretamente no seu cliente MySQL/MariaDB.
 
-3. Configure as credenciais de acesso ao banco no arquivo `app/models/Database.php`:
+3. Configure as credenciais de acesso ao banco no arquivo `config/database.php`:
    ```php
-   private $host = 'localhost';     // Endereço do servidor de banco de dados
-   private $username = 'root';      // Nome de usuário do banco de dados
-   private $password = '';          // Senha do banco de dados
-   private $database = 'omnia_db';  // Nome do banco de dados
+   define('DB_HOST', 'localhost');     // Endereço do servidor de banco de dados
+   define('DB_USER', 'root');          // Nome de usuário do banco de dados
+   define('DB_PASS', '');              // Senha do banco de dados
+   define('DB_NAME', 'omnia_db');      // Nome do banco de dados
    ```
 
 ## Estrutura do Banco de Dados
