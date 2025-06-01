@@ -1,0 +1,156 @@
+/* Estilos personalizados para o painel administrativo */
+
+/* Variáveis de cores */
+:root {
+    --primary: #006837;
+    --secondary: #f8b133;
+    --dark: #333333;
+    --light: #f8f9fa;
+    --success: #28a745;
+    --danger: #dc3545;
+}
+
+/* Layout do sidebar */
+#sidebar-wrapper {
+    min-height: 100vh;
+    width: 250px;
+    margin-left: -250px;
+    transition: margin 0.25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+
+.list-group-item {
+    border: none;
+    padding: 15px 30px;
+}
+
+.list-group-item.active, 
+.list-group-item:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-left: 4px solid var(--secondary);
+}
+
+/* Conteúdo principal */
+.card-admin {
+    border: none;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    margin-bottom: 24px;
+}
+
+.card-admin .card-header {
+    background-color: #f8f9fc;
+    border-bottom: 1px solid #e3e6f0;
+    padding: 1rem 1.25rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+/* Tabelas */
+.table-admin {
+    color: #333;
+}
+
+.table-admin th {
+    background-color: #f8f9fc;
+    font-weight: 600;
+    border-top: none;
+}
+
+.table-admin td {
+    vertical-align: middle;
+}
+
+/* Botões de ação */
+.btn-action {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+/* Formulários */
+.form-admin label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.form-admin .form-control {
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    border: 1px solid #d1d3e2;
+}
+
+.form-admin .form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem rgba(0, 104, 55, 0.25);
+}
+
+/* Imagem preview */
+.img-preview {
+    max-width: 150px;
+    max-height: 150px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+    }
+    
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+    
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -250px;
+    }
+}
+
+/* Notificações */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    max-width: 350px;
+}
+
+/* Animações */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
