@@ -2,17 +2,19 @@
 
 O projeto segue o padrão de arquitetura MVC (Model-View-Controller) com orientação a objetos, organizado da seguinte forma:
 
+```
 project/
 ├── app/
 │   ├── controllers/      # Controladores das páginas
 │   ├── models/           # Modelos para acesso a dados
 │   ├── views/            # Views/templates das páginas
-|   |   ├── admin/            # Arquivos do painel administrativo
+|   |   ├── admin/        # Arquivos do painel administrativo
 │   ├── components/       # Componentes reutilizáveis
 │   ├── config/           # Arquivos de configuração
 │   ├── public/           # Arquivos públicos (CSS, JS, imagens)
 │   └── scripts/          # Scripts de utilidade
 └── index.php             # Ponto de entrada da aplicação
+```
 
 
 ## Instruções de Instalação
